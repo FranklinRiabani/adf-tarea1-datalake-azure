@@ -1,0 +1,9 @@
+{
+	"name": "df-sisger-datalake",
+	"location": "brazilsouth",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "fd48bbb3-3000-475c-9ce9-24026f930c7b",
+		"tenantId": "cc28633f-12b8-46cb-bc15-951dae239b4d"
+	}
+}
