@@ -13,7 +13,11 @@
 				}
 			],
 			"sinks": [],
-			"transformations": [],
+			"transformations": [
+				{
+					"name": "stringify1"
+				}
+			],
 			"scriptLines": [
 				"source(output(",
 				"          order_id as string,",
@@ -30,7 +34,10 @@
 				"     allowSchemaDrift: true,",
 				"     validateSchema: false,",
 				"     ignoreNoFilesFound: false,",
-				"     documentForm: 'arrayOfDocuments') ~> source1"
+				"     documentForm: 'arrayOfDocuments') ~> source1",
+				"source1 stringify(columna1 = ERROR_FUNCTION('') ? string,",
+				"          columna2 = ERROR_FUNCTION('') ? string,",
+				"     format: 'json') ~> stringify1"
 			]
 		}
 	}
